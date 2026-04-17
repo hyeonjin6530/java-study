@@ -4,7 +4,7 @@ public class Database {
     /*
      * 싱글톤 패턴
      * - 어플리케이션에서 하나의 객체만 생성되도록 보장하는 디자인 패턴
-     * - 동일한 인스터스를 공유해서 사용
+     * - 동일한 인스턴스를 공유해서 사용
      * */
 
     private String connection = "MYSQL";
@@ -12,9 +12,11 @@ public class Database {
     // 객체를 만들지 않아도 사용 가능
     private static Database database = new Database();
 
-    // 기본생성자를 privated으로 접근못하게 막음
-    private Database getInstance() {
+    // 기본생성자를 private으로 접근못하게 막음
+    private Database () {
+    }
 
-
+    public static Database getInstance() {
+        return database;
     }
 }
