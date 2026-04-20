@@ -5,6 +5,7 @@ import java.lang.management.MonitorInfo;
 public class Application {
     public static void main(String[] args) {
         Monster monster = new Monster();
+        Monster monster1 = new Monster();
 
         monster.setName("드라큘라");
 
